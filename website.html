@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Heaven</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .hero-section {
+            background: url('wallpaper opening page.png') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+        }
+
+        .custom-feature {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .gallery-section, .about-section, .contact-section, .custom-section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .gallery-section h2, .about-section h2, .contact-section h2, .custom-section h2 {
+            margin-bottom: 2rem;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            width: 200px; /* Increase size */
+            height: 400px; /* Increase size */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .about-section p, .contact-section p, .custom-section p {
+            max-width: 600px;
+            margin: 0 auto 1rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .lightbox {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9); /* Black with opacity */
+        }
+
+        .lightbox img {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-item {
+                width: calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-item {
+                width: 100%;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-text p {
+                font-size: 1rem;
+            }
+
+            .custom-feature {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Wallpaper Heaven</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-text">
+            <h1>Welcome to Wallpaper Heaven</h1>
+            <p>Your ultimate source for stunning wallpapers</p>
+            <div class="custom-feature">
+                <p>Want something unique? Get a custom-made wallpaper tailored to your desires for just $5!</p>
+                <p>Email us your requirements and we'll craft the perfect wallpaper just for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+       <h2>Gallery - Tap and click screenshot</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="IMG_0774.WEBP" alt="Wallpaper 1" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_0777.JPG" alt="Wallpaper 2" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_0779.JPG" alt="Wallpaper 3" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_0782.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_0788.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_0789.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_0790.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+            </div>
+            <!-- Add more wallpapers as needed -->
+
+        </div>
+        <p style="margin-top: 1rem;">More wallpapers coming soon</p>
+    </section>
+
+    <section id="custom" class="custom-section">
+        <h2>Get Your Custom Wallpaper</h2>
+        <p>For just $5, you can get a custom-made wallpaper tailored to your preferences. Send us your requirements and our team will create a unique wallpaper just for you.</p>
+        <p><a href="mailto:wallpaperzone552@gmail.com?subject=Custom Wallpaper Request&body=Please provide details for your custom wallpaper and the method of transaction">Email us your requirements</a></p>
+        <p>Price: $5</p>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>Welcome to Wallpaper Heaven, where every wallpaper is a work of art waiting to be discovered.
+
+            We're passionate about bringing beauty to your screens. From stunning landscapes to captivating illustrations, our curated collection has something for everyone.
+            
+            But we're not just about pretty pictures. We're a community of creative minds, dedicated to sparking inspiration and making your digital world a little more colorful.
+            
+            Whether you're seeking a serene backdrop for your phone or a vibrant splash of color, Wallpaper Heaven is here to make it happen.
+            
+            Additionally, we offer a unique service: custom wallpapers tailored to your exact specifications. Have a specific theme, color scheme, or image in mind? Simply email us with your requirements, and our team of skilled digital artists will work closely with you to bring your vision to life. Whether it's for personal use, a corporate project, or any other purpose, we'll ensure that your custom wallpaper is crafted to perfection.
+            
+            Transform your device with a one-of-a-kind creation designed just for you. Let your imagination run wild, and let us handle the rest.
+            
+            Join us and let your phone come to life with our wallpapers.
+            
+            </p>
+        <p>Explore our collection and find the perfect wallpaper that speaks to you. Whether you're looking for something serene and calming or vibrant and bold, we've got you covered.</p>
+    </section>
+
+
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or suggestions, feel free to reach out to us <a href="mailto:wallpaperzone552@gmail.com">Mail here</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Wallpaper Heaven. All rights reserved.</p>
+    </footer>
+
+    <!-- Lightbox Container -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'block';
+            lightboxImg.src = src;
+        }
+
+        function closeLightbox() {
+            var lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
