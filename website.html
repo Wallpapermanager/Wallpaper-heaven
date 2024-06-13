@@ -140,6 +140,23 @@
             cursor: pointer;
         }
 
+        .download-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .download-button:hover {
+            background-color: #45a049;
+        }
+
         @media (max-width: 768px) {
             .gallery-item {
                 width: calc(50% - 1rem);
@@ -187,13 +204,6 @@
         </div>
     </section>
 
-<section id="custom" class="custom-section">
-        <h2>Get Your Custom Wallpaper</h2>
-        <p>For just $2, you can get a custom-made wallpaper tailored to your preferences. Send us your requirements and our team will create a unique wallpaper just for you.</p>
-        <p><a href="mailto:wallpaperzone552@gmail.com?subject=Custom Wallpaper Request&body=Please provide details for your custom wallpaper and the method of transaction">Email us your requirements</a></p>
-        <p>Price: $2</p>
-    </section>
-    
     <section id="gallery" class="gallery-section">
        <h2>Gallery - Tap and click screenshot</h2>
         <div class="gallery-container">
@@ -218,90 +228,66 @@
             <div class="gallery-item">
                 <img src="IMG_0790.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_5019.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_5027.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_5032.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_5077.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-            
             <div class="gallery-item">
-                <img src="IMG_5008.jpeg
-                " alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_5008.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
-                <img src="IMG_0804.WEBP"
-                alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0804.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
-                <img src="IMG_0805.WEBP"
-                alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0805.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_0806.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_0815.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_0808.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_0809.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_0810.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_0811.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_0812.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_0813.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_0814.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_0816.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_0807.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_0818.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-            
             <div class="gallery-item">
                 <img src="IMG_0821.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-
             <div class="gallery-item">
                 <img src="IMG_0823.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
@@ -311,6 +297,12 @@
         <p style="margin-top: 1rem;">More wallpapers coming soon</p>
     </section>
 
+    <section id="custom" class="custom-section">
+        <h2>Get Your Custom Wallpaper</h2>
+        <p>For just $2, you can get a custom-made wallpaper tailored to your preferences. Send us your requirements and our team will create a unique wallpaper just for you.</p>
+        <p><a href="mailto:wallpaperzone552@gmail.com?subject=Custom Wallpaper Request&body=Please provide details for your custom wallpaper and the method of transaction">Email us your requirements</a></p>
+        <p>Price: $2</p>
+    </section>
 
     <section id="about" class="about-section">
         <h2>About Us</h2>
@@ -347,6 +339,7 @@
     <div id="lightbox" class="lightbox">
         <span class="close" onclick="closeLightbox()">&times;</span>
         <img id="lightbox-img" src="">
+        <button class="download-button" onclick="downloadImage()">Save to Photos</button>
     </div>
 
     <script>
@@ -360,6 +353,17 @@
         function closeLightbox() {
             var lightbox = document.getElementById('lightbox');
             lightbox.style.display = 'none';
+        }
+
+        function downloadImage() {
+            var lightboxImg = document.getElementById('lightbox-img');
+            var link = document.createElement('a');
+            link.href = lightboxImg.src;
+            link.download = 'wallpaper';
+            link.style.display = 'none';  // Ensure the link is not visible
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
     </script>
 </body>
