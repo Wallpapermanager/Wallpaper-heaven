@@ -59,16 +59,15 @@
 
         .custom-feature {
             margin-top: 2rem;
-            
         }
 
         .gallery-section, .about-section, .contact-section, .custom-section {
             padding: 4rem 2rem;
-            text-align: center;
         }
 
         .gallery-section h2, .about-section h2, .contact-section h2, .custom-section h2 {
             margin-bottom: 2rem;
+            text-align: center;
         }
 
         .gallery-container {
@@ -95,6 +94,7 @@
         .about-section p, .contact-section p, .custom-section p {
             max-width: 600px;
             margin: 0 auto 1rem;
+            text-align: center;
         }
 
         footer {
@@ -157,9 +157,33 @@
             background-color: #45a049;
         }
 
+        .custom-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .custom-container h2 {
+            text-align: center;
+        }
+
+        .custom-text p {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
         @media (max-width: 768px) {
             .gallery-item {
                 width: calc(50% - 1rem);
+            }
+
+            .custom-container {
+                flex-direction: column;
+            }
+
+            .custom-container h2 {
+                text-align: center;
             }
         }
 
@@ -178,6 +202,10 @@
 
             .custom-feature {
                 font-size: 1rem;
+            }
+
+            .custom-text p {
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -205,14 +233,24 @@
     </section>
 
     <section id="custom" class="custom-section">
-        <h2>Get Your Custom Wallpaper</h2>
-        <p>For just $2, you can get a custom-made wallpaper tailored to your preferences. Send us your requirements and our team will create a unique wallpaper just for you.</p>
-        <p><a href="mailto:wallpaperzone552@gmail.com?subject=Custom Wallpaper Request&body=Please provide details for your custom wallpaper and the method of transaction">Email us your requirements</a></p>
-        <p><u><b>Price: $2</b></u></p>
+        <div class="custom-container">
+            <div class="custom-video">
+                <video width="640" height="480" autoplay loop muted>
+                    <source src="Any design.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="custom-text">
+                <h2>Get Your Custom Wallpaper</h2>
+                <p>For just $2, you can get a custom-made wallpaper tailored to your preferences. Send us your requirements and our team will create a unique wallpaper just for you.</p>
+                <p><a href="mailto:wallpaperzone552@gmail.com?subject=Custom Wallpaper Request&body=Please provide details for your custom wallpaper and the method of transaction">Email us your requirements</a></p>
+                <p><u><b>Price: $2</b></u></p>
+            </div>
+        </div>
     </section>
 
     <section id="gallery" class="gallery-section">
-       <h2>Gallery</h2>
+        <h2> Free Gallery</h2>
         <div class="gallery-container">
             <div class="gallery-item">
                 <img src="IMG_0774.WEBP" alt="Wallpaper 1" onclick="openLightbox(this.src)">
@@ -251,14 +289,9 @@
                 <img src="IMG_5008.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_0804.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
-            </div>
-            <div class="gallery-item">
-                <img src="IMG_0805.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
-            </div>
-            <div class="gallery-item">
                 <img src="IMG_0806.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
+           
             <div class="gallery-item">
                 <img src="IMG_0815.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
@@ -298,12 +331,9 @@
             <div class="gallery-item">
                 <img src="IMG_0823.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
             </div>
-            <!-- Add more wallpapers as needed -->
-
         </div>
-        <p style="margin-top: 1rem;">More wallpapers coming soon</p>
+        <p style="margin-top: 1rem; text-align: center;">More wallpapers coming soon</p>
     </section>
-
 
     <section id="about" class="about-section">
         <h2>About Us</h2>
@@ -325,8 +355,6 @@
         <p>Explore our collection and find the perfect wallpaper that speaks to you. Whether you're looking for something serene and calming or vibrant and bold, we've got you covered.</p>
     </section>
 
-
-
     <section id="contact" class="contact-section">
         <h2>Contact Us</h2>
         <p>If you have any questions or suggestions, feel free to reach out to us <a href="mailto:wallpaperzone552@gmail.com">Mail here</a>.</p>
@@ -340,7 +368,7 @@
     <div id="lightbox" class="lightbox">
         <span class="close" onclick="closeLightbox()">&times;</span>
         <img id="lightbox-img" src="">
-        <button class="download-button" onclick="downloadImage()">Download</button>
+        <button class="download-button" onclick="downloadImage()">Save to Photos</button>
     </div>
 
     <script>
