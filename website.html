@@ -10,12 +10,12 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-5KX546140S');
     </script>
     <!-- End Google Analytics -->
 
-
+    <meta name="google-site-verification" content="7VSnm0EXNn_gDQ9xKu7SQTn4-CR9mn2-z6Plvf0oqAE" />
+    
     <style>
         body {
             margin: 0;
@@ -30,6 +30,9 @@
             justify-content: space-between;
             align-items: center;
         }
+        /* Navigation Bar Styling */
+
+
 
         .logo {
             color: #fff;
@@ -73,13 +76,68 @@
             margin-top: 2rem;
         }
 
-        .gallery-section, .about-section, .contact-section, .custom-section {
+        .about-section, .contact-section, .custom-section {
             padding: 4rem 2rem;
         }
 
-        .gallery-section h2, .about-section h2, .contact-section h2, .custom-section h2 {
+        .about-section h2, .contact-section h2, .custom-section h2 {
             margin-bottom: 2rem;
             text-align: center;
+        }
+
+        .about-section p, .contact-section p, .custom-section p {
+            max-width: 600px;
+            margin: 0 auto 1rem;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .custom-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .custom-container h2 {
+            text-align: center;
+        }
+
+        .custom-text p {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .link-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .link-item {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .link-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 2px solid #4CAF50;
+        }
+
+        .gallery-section {
+            display: none;
+            padding: 4rem 2rem;
         }
 
         .gallery-container {
@@ -103,17 +161,36 @@
             cursor: pointer;
         }
 
-        .about-section p, .contact-section p, .custom-section p {
-            max-width: 600px;
-            margin: 0 auto 1rem;
-            text-align: center;
+        .add-to-cart-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
+        .add-to-cart-button:hover {
+            background-color: #45a049;
+        }
+
+        .go-back {
             text-align: center;
-            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        .go-back button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .go-back button:hover {
+            background-color: #45a049;
         }
 
         .lightbox {
@@ -169,22 +246,6 @@
             background-color: #45a049;
         }
 
-        .custom-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .custom-container h2 {
-            text-align: center;
-        }
-
-        .custom-text p {
-            font-size: 1.5rem;
-            text-align: center;
-        }
-
         @media (max-width: 768px) {
             .gallery-item {
                 width: calc(50% - 1rem);
@@ -220,6 +281,8 @@
                 font-size: 1.2rem;
             }
         }
+             
+        
     </style>
 </head>
 <body>
@@ -227,10 +290,16 @@
         <div class="logo">Wallpaper Heaven</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <nav>
+            <!-- Existing navigation links -->
+            <ul>
+            
+             
+          </div>
+          
     </header>
 
     <section id="home" class="hero-section">
@@ -261,112 +330,210 @@
         </div>
     </section>
 
-    <section id="gallery" class="gallery-section">
-        <h2> Free Gallery</h2>
+    <section class="link-container">
+        <div class="link-item" onclick="showGallery('free-gallery')">
+            <img src="Free Amazing wallpapers1.png" alt="Free Wallpapers">
+        </div>
+        <div class="link-item" onclick="showGallery('paid-gallery')">
+            <img src="Niche wallpapers.png" alt="Paid Wallpapers">
+        </div>
+    </section>
+
+    <section id="free-gallery" class="gallery-section">
+        <h2>Free Gallery</h2>
         <div class="gallery-container">
+           
+           
+            <!-- Add your free wallpapers here -->
             <div class="gallery-item">
                 <img src="IMG_0774.WEBP" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_0777.JPG" alt="Wallpaper 2" onclick="openLightbox(this.src)">
+                <img src="IMG_0777.JPG" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_0779.JPG" alt="Wallpaper 3" onclick="openLightbox(this.src)">
+                <img src="IMG_5077.jpeg" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_0782.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0779.JPG" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_0788.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0782.JPG" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_0789.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_5019.jpeg" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_0790.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0789.jpeg" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_5019.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0790.jpeg" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_5027.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_5032.jpeg" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_5032.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_5027.jpeg" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_5077.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0807.WEBP" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_5008.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0808.WEBP" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_0806.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
-            </div>
-           
-            <div class="gallery-item">
-                <img src="IMG_5150.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0809.WEBP" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_0808.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0810.JPG" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_0809.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0811.JPG" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_0810.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0813.WEBP" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_0811.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0812.WEBP" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_0812.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0816.JPG" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_0813.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0818.JPG" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_5149.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0821.JPG" alt="Wallpaper 1" onclick="openLightbox(this.src)">
             </div>
             <div class="gallery-item">
-                <img src="IMG_0816.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_0823.JPG" alt="Wallpaper 1" onclick="openLightbox(this.src)">
+            </div>
+            <!-- Add more free wallpapers as needed -->
+        </div>
+        <div class="go-back">
+            <button onclick="goBack()">Go Back</button>
+        </div>
+    </section>
+
+    <section id="paid-gallery" class="gallery-section">
+        <h2>Paid Gallery</h2>
+        <div class="gallery-container">
+            <!-- Add your paid wallpapers here -->
+            <div class="gallery-item">
+                <img src="IMG_5147.jpeg" alt="Paid Wallpaper 1" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5147.jpeg')">Add to Cart</button>
             </div>
             <div class="gallery-item">
-                <img src="IMG_0807.WEBP" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_5176.jpeg" alt="Paid Wallpaper 2" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5176.jpeg')">Add to Cart</button>
             </div>
             <div class="gallery-item">
-                <img src="IMG_0818.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_5177.jpeg" alt="Paid Wallpaper 3" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5177.jpeg')">Add to Cart</button>
             </div>
             <div class="gallery-item">
-                <img src="IMG_0821.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_5178.jpeg" alt="Paid Wallpaper 4" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5178.jpeg')">Add to Cart</button>
             </div>
             <div class="gallery-item">
-                <img src="IMG_0823.JPG" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_5179.jpeg" alt="Paid Wallpaper 5" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5179.jpeg')">Add to Cart</button>
             </div>
             <div class="gallery-item">
-                <img src="IMG_5146.jpeg" alt="Wallpaper 4" onclick="openLightbox(this.src)">
+                <img src="IMG_5189.jpeg" alt="Paid Wallpaper 6" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5189.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5192.jpeg" alt="Paid Wallpaper 7" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5192.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5206.jpeg" alt="Paid Wallpaper 8" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5206.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5207.jpeg" alt="Paid Wallpaper 9" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5207.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5212.jpeg" alt="Paid Wallpaper 10" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5212.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5213.jpeg" alt="Paid Wallpaper 11" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5213.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5214.jpeg" alt="Paid Wallpaper 12" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5214.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5215.jpeg" alt="Paid Wallpaper 13" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5215.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5216.jpeg" alt="Paid Wallpaper 14" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5216.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5218.jpeg" alt="Paid Wallpaper 15" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5218.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5219.jpeg" alt="Paid Wallpaper 16" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5219.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5228.JPG" alt="Paid Wallpaper 17" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5228.JPG')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5233.jpeg" alt="Paid Wallpaper 18" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5233.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5234.jpeg" alt="Paid Wallpaper 19" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5234.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5235.jpeg" alt="Paid Wallpaper 20" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5235.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5180.jpeg" alt="Paid Wallpaper 21" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5180.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5181.jpeg" alt="Paid Wallpaper 22" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5181.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_5009.jpeg" alt="Paid Wallpaper 23" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_5009.jpeg')">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_0806.WEBP" alt="Paid Wallpaper 24" onclick="openLightbox(this.src)">
+                <button class="add-to-cart-button" onclick="addToCart('IMG_0806.WEBP')">Add to Cart</button>
             </div>
         </div>
-        <p style="margin-top: 1rem; text-align: center;">More wallpapers coming soon</p>
+    
+            <!-- Add more paid wallpapers as needed -->
+        </div>
+        <div class="go-back">
+            <button onclick="goBack()">Go Back</button>
+        </div>
     </section>
 
     <section id="about" class="about-section">
         <h2>About Us</h2>
         <p>Welcome to Wallpaper Heaven, where every wallpaper is a work of art waiting to be discovered.
-
             We're passionate about bringing beauty to your screens. From stunning landscapes to captivating illustrations, our curated collection has something for everyone.
-            
             But we're not just about pretty pictures. We're a community of creative minds, dedicated to sparking inspiration and making your digital world a little more colorful.
-            
             Whether you're seeking a serene backdrop for your phone or a vibrant splash of color, Wallpaper Heaven is here to make it happen.
-            
             Additionally, we offer a unique service: custom wallpapers tailored to your exact specifications. Have a specific theme, color scheme, or image in mind? Simply email us with your requirements, and our team of skilled digital artists will work closely with you to bring your vision to life. Whether it's for personal use, a corporate project, or any other purpose, we'll ensure that your custom wallpaper is crafted to perfection.
-            
             Transform your device with a one-of-a-kind creation designed just for you. Let your imagination run wild, and let us handle the rest.
-            
             Join us and let your phone come to life with our wallpapers.
-            
-            </p>
+        </p>
         <p>Explore our collection and find the perfect wallpaper that speaks to you. Whether you're looking for something serene and calming or vibrant and bold, we've got you covered.</p>
     </section>
 
@@ -385,6 +552,7 @@
         <img id="lightbox-img" src="">
         <button class="download-button" onclick="downloadImage()">Save to Photos</button>
     </div>
+
 
     <script>
         function openLightbox(src) {
@@ -409,6 +577,93 @@
             link.click();
             document.body.removeChild(link);
         }
+
+        function showGallery(galleryId) {
+            var galleries = document.querySelectorAll('.gallery-section');
+            galleries.forEach(function(gallery) {
+                gallery.style.display = 'none';
+            });
+            var selectedGallery = document.getElementById(galleryId);
+            selectedGallery.style.display = 'block';
+        }
+
+        function goBack() {
+            var galleries = document.querySelectorAll('.gallery-section');
+            galleries.forEach(function(gallery) {
+                gallery.style.display = 'none';
+            });
+        }
     </script>
+    <script>
+        let cart = [];
+
+function addToCart(image) {
+    cart.push(image);
+    alert('Added to cart!');
+}
+
+function openCart() {
+    const cartModal = document.getElementById('cartModal');
+    const cartItemsDiv = document.getElementById('cartItems');
+    cartItemsDiv.innerHTML = '';
+
+    if (cart.length === 0) {
+        cartItemsDiv.innerHTML = '<p>Your cart is empty</p>';
+    } else {
+        cart.forEach((item, index) => {
+            cartItemsDiv.innerHTML += `<p>${index + 1}. ${item}</p>`;
+        });
+    }
+
+    cartModal.style.display = 'block';
+}
+
+function closeCart() {
+    document.getElementById('cartModal').style.display = 'none';
+}
+
+   
+function checkout() {
+    alert('Proceed to checkout');
+    // Implement checkout functionality
+}
+
+        // Function to toggle the cart modal
+        function toggleCart() {
+          var cartModal = document.getElementById("cart-modal");
+          if (cartModal.style.display === "block") {
+            cartModal.style.display = "none";
+          } else {
+            cartModal.style.display = "block";
+          }
+        }
+      
+        // Function to add an item to the cart
+        function addToCart(item) {
+          var cartItems = document.getElementById("cart-items");
+          var cartCount = document.getElementById("cart-count");
+          
+          // Create a new list item
+          var li = document.createElement("li");
+          li.textContent = item;
+          
+          // Append the new item to the cart
+          cartItems.appendChild(li);
+      
+          // Update the cart count
+          cartCount.textContent = cartItems.children.length;
+        }
+      
+        // Function to handle checkout
+        function checkout() {
+          alert("Proceeding to checkout...");
+          // Add your checkout logic here
+        }
+      
+        // Example usage: adding an item to the cart
+        // addToCart('Sample Item');
+      </script>
+      
+
 </body>
 </html>
